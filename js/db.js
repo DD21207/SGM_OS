@@ -11,10 +11,10 @@ window.onresize = function() {
 function DB(type){
       switch (type) {
         case "postbuy":
-            $("#centerFrame").attr('src','PPT/ZK_container1.html');
+            $("#centerFrame").attr('src','https://www.starcompass.net/bi/Viewer?proc=1&action=viewer&hback=true&db=DEMO!2f!SGM!2f!Postbuy.db');
             break;
         case "competitor":
-            $("#centerFrame").attr('src','PPT/ZK_container2.html');
+            $("#centerFrame").attr('src','https://www.starcompass.net/bi/Viewer?proc=1&action=viewer&hback=true&db=DEMO!2f!SGM!2f!Competitor%20report.db');
             break;
     }
 }

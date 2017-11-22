@@ -2,13 +2,13 @@ function bar(id, title, x_data, data) {
     var myChart = echarts.init(document.getElementById(id));
     option = {
         title: {
-            text: 'Baidu Index Contributed by Media Only',
+            text: title,
             x: 'center',
         },
         color:['#31859C'],
         xAxis: [{
             type: 'category',
-            data: ['Optimized', 'Original']
+            data: x_data
         }],
         yAxis: [{
             type: 'value'
@@ -37,7 +37,7 @@ function bar(id, title, x_data, data) {
 
                 }
             },
-            data: [20000, 24000],
+            data: data,
         }]
     };
 

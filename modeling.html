@@ -8,15 +8,11 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/modeling.css">
-    <script src="js/jquery.min.js"></script>
-    <script src="js/echarts.min.js"></script>
-	<script src="js/vue.min.js"></script>
-	<script src="js/vue-resource.min.js"></script>
-    <script src="js/chart.js"></script>
-    <script src="js/modeling.js"></script>
+ 
 </head>
 
 <body style="background: #f9f9f9;">
+<div id="body_div">
     <div class="header">
         <ul class="header_ul">
             <li><img src="img/logo/Zenith.png" alt="" height="100%" style="margin-top: 5px;"> </li>
@@ -64,18 +60,18 @@
                         </tr>
                         <tr id="tr5">
                             <td rowspan="2" class="td3" >Input</td>
-                            <td class="td3">89%</td>
-                            <td class="td3">8%</td>
-                            <td class="td3">1%</td>
-                            <td class="td3">1%</td>
-                            <td class="td3">0.4%</td>
+                            <td class="td3"><input v-bind:value="TV"  v-model="TV" type="text"/></td>
+                            <td class="td3"><input v-bind:value="OTV"  v-model="OTV" type="text"/></td>
+                            <td class="td3"><input v-bind:value="NonOTV"  v-model="NonOTV" type="text"/></td>
+                            <td class="td3"><input v-bind:value="Magazine"  v-model="Magazine" type="text"/></td>
+                            <td class="td3"><input v-bind:value="OOH"  v-model="OOH" type="text"/></td>
                         </tr>
                         <tr id="tr6">
                             <td colspan="5" style="background: #f2f2f2">100%</td>
                         </tr>
                     </tbody>
                 </table>
-                <button class="btn btn-primary btn1">Confirm</button>
+                <button class="btn btn-primary btn1" v-on:click="confirm()">Confirm</button>
             </div>
             <div class="content_box" style="margin-left: 2%">
             	<div id="table_box">
@@ -85,8 +81,8 @@
                             <td colspan="2" style="background: #C4DB97">+/- INCREASE</td>
                         </tr>
                         <tr>
-                            <td>Spending</td>
-                            <td>Spending</td>
+                            <td>{{pn |formatNum}}</td>
+                            <td>{{Increase |formatNum1}}</td>
                         </tr>
                     </tbody>
                 </table>
@@ -97,6 +93,13 @@
             </div>
         </div>
     </div>
+</div>
+   <script src="js/jquery.min.js"></script>
+    <script src="js/echarts.min.js"></script>
+    <script src="js/vue.min.js"></script>
+    <script src="js/vue-resource.min.js"></script>
+    <script src="js/chart.js"></script>
+    <script src="js/modeling.js"></script>
 </body>
 
 </html>
